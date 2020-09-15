@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	var f=true
+    $("#topbar").click(function(){
+		if(f) $("#panel").slideDown(1000);
+		else $("#panel").slideUp(1000);
+		f=!f
+	});
+	
+	/* Or simple we can use slideToggle to perform both the actions. */
+});
+</script>
+
+<style>
+#panel, #topbar {
+	padding: 5px;
+	text-align: center;
+	background-color: yellow;
+	border: solid 1px black;
+}
+
+#panel {
+	padding: 80px;
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="topbar">View Panel</div>
+<div id="panel">This is a Panel with sample Content</div>
+
+</body>
+</html>

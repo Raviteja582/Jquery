@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#single").click(function(){
+            $(this).hide(500);
+        });
+        $("#double").dblclick(function(){
+            $(this).hide(500);
+        });
+    });
+</script>
+<body>
+    <p id="single">Hide the text on single click</p>
+    <br>
+    <br>
+    <p id="double">Hide the text on double click</p>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #square{
+            background:blue;
+            height:160px;
+            width:160px;
+            margin-top:5px;
+            position:absolute;
+        }
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    var f1=true
+    var f2=true
+    $(document).ready(function() {
+
+        $("#call").click(function(){
+            $("#square").hide(1000,function(){
+                alert("Callback function called.");
+            });
+        });
+
+        $("#nocall").click(function(){
+            $("#square").hide(1000);
+            alert("after Clicking OK box will hide, i.e no callback");
+        })
+
+        $("#togg").click(function(){
+            $("h6").toggle(1000);
+        });
+        $("#head").click(function(){
+            if(f2){
+                $("h1").hide(1000);
+                $("#head").html("Show Heading");
+                f2=false
+            }
+            else{
+                $("h1").show(1000);
+                $("#head").html("Hide Heading");
+                f2=true
+            }
+        });
+        $("#para").click(function(){
+            if(f1){
+                $("p").hide(1000);
+                $("#para").html("Show Para");
+                f1=false
+            }
+            else{
+                $("p").show(1000);
+                $("#para").html("Hide Para");
+                f1=true
+            }
+        });
+    });
+</script>
+
+
+<body>
+    
+    <h1>This is the main Heading</h1>
+    <button id="head">Hide Heading</button><br>
+    <p>This text will be hidden.</p>
+    <p>This is the text that also be hidden.</p>
+    <button id="para">Hide Para</button><br>
+    <h6>This is hidden through toggle</h6>
+    <button id="togg">toogle</button><br><br>
+    <button id="call">Click to see callback Effect</button><br><br>
+    <button id="nocall">Click to see no callback effect</button>
+    <div id="square"></div><br>
+</body>
+
+</html>

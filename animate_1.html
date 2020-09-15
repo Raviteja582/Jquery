@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#but").click(function(){
+        $("#square").animate({height: '500px',opacity: 1}, 1000);
+        $("#square").animate({width: '500px',opacity: 0.75},750);
+        $("#square").animate({height: '100px',opacity: 0.50}, 500);
+        $("#square").animate({width: '100px',opacity: 0.25}, 250);
+    });
+    $("#butt").click(function(){
+        $("#square").stop();
+    });
+});
+</script>
+
+<style>
+
+#square{
+	background:blue;
+	height:160px;
+	width:160px;
+	margin-top:5px;
+	position:absolute;
+}
+
+</style>
+</head>
+<body>
+
+<button id="but">Start Animation</button>
+<button id="butt">Stop Animation</button>
+
+<div id="square"></div>
+
+</body>
+</html>

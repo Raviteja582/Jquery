@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#rem").click(function(){
+			$("#square").remove();
+		});
+		$("#emp").click(function(){
+			$("#square").empty();
+		})
+	});
+	</script>
+
+	<style>
+
+	#square {
+
+	height:200px;
+	width:300px;
+	padding: 20px;
+	border:1px solid black;
+	background-color:pink;
+	margin-bottom: 10px;
+
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="square">Sample Text.</div>
+
+	<button id="rem">Remove</button>&nbsp;&nbsp;
+	<button id="emp">Empty</button>
+
+</body>
+</html>

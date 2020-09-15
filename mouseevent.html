@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+    /* One way to define the script of jquery */
+
+    $(document).ready(function(){
+        $("#single").mouseenter(function(){
+            $(this).css("background-color","red");
+        });
+        $("#single").mouseleave(function(){
+            $(this).css("background-color","blue");
+        });
+        $("#single").click(function(){
+            $(this).css("background-color","cyan");
+        });
+        $("#single").dblclick(function(){
+            $(this).css("background-color","white");
+        });
+    });
+
+    /* Second way of creating script for jquery for particular selector */
+
+    $(document).ready(function(){
+        $("#single").on({
+            mouseenter: function(){
+                $(this).css("background-color","red");
+            },
+            mouseleave: function(){
+                $(this).css("background-color","blue");
+            },
+            click: function(){
+                $(this).css("background-color","cyan");
+            },
+            dblclick: function(){
+                $(this).css("background-color","white");
+            }
+        });
+    });
+
+</script>
+
+<body>
+    <p id="single">Hover the mouse here</p>
+</body>
+
+</html>
